@@ -87,3 +87,9 @@ if __name__ == "__main__":
     t = buildTree(df)
     # pprint (pretty print) is used for better output interpretability
     pprint.pprint(t)
+
+
+## OUTPUT
+# {'outlook': {'Overcast': 'Yes',
+#              'Rain': {'wind': {'Strong': 'No', 'Weak': 'Yes'}},
+#              'Sunny': {'humidity': {'High': 'No', 'Normal': 'Yes'}}}}
