@@ -1,0 +1,16 @@
+day,outlook,temperature,humidity,wind,play
+D15,Overcast,Hot,Normal,Weak,Yes
+D16,Sunny,Mild,High,Weak,No
+D17,Sunny,Cool,High,Weak,Yes
+D18,Rain,Cool,High,Strong,No
+D19,Sunny,Hot,Normal,Strong,Yes
+D20,Overcast,Mild,Normal,Weak,Yes
+D21,Rain,Mild,High,Weak,Yes
+D22,Sunny,Cool,Normal,Strong,No
+D23,Sunny,Hot,High,Weak,No
+D24,Rain,Cool,Normal,Weak,Yes
+D25,Overcast,Mild,Normal,Strong,Yes
+D26,Sunny,Cool,High,Strong,No
+D27,Sunny,Mild,Normal,Weak,Yes
+D28,Overcast,Hot,High,Weak,Yes
+D29,Rain,Mild,Normal,Strong,No
