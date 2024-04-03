@@ -1,10 +1,10 @@
+# NBC Fever
 import pandas as pd
 import numpy as np
 eps = np.finfo(float).eps
 
 def classify(entry, classes, cp, pp):
     max_prob = 0
-    prob = 0
     class_of_entry = classes[0]
     for cl in classes:
         prob = pp[cl]

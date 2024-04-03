@@ -1,3 +1,4 @@
+# Sequential Covering
 def sequential_covering(examples):
     rules = []
     remaining_examples = examples.copy()
@@ -12,20 +13,6 @@ def sequential_covering(examples):
 
     return rules
 
-# def sequential_covering(examples):
-#     rules = []
-#     remaining_examples = examples.copy()
-#     covered_attributes = []
-
-#     while not remaining_examples.empty:
-#         rule = generate_rule(remaining_examples, covered_attributes)
-#         rules.append(rule)
-#         print(rule)
-#         covered_attributes.extend(rule.keys())  # Update the list of covered attributes
-#         remaining_examples = remove_covered_examples(remaining_examples, rule)
-
-#     return rules
-
 
 def generate_rule(examples):
     rule = {}
@@ -35,15 +22,6 @@ def generate_rule(examples):
 
     return rule
 
-# def generate_rule(examples, covered_attributes=[]):
-#     rule = {}
-#     for attribute in examples.columns[:]:
-#         if attribute not in covered_attributes:
-#             value = examples[attribute].mode()[0]
-#             rule[attribute] = value
-
-#     return rule
-
 
 def remove_covered_examples(examples, rule):
     for i, row in enumerate(examples):
@@ -52,8 +30,6 @@ def remove_covered_examples(examples, rule):
             flag = flag and examples[attribute].loc[examples.index[i]] == value
         if flag:
             examples = examples.drop(examples.index[i])
-    # for attribute, value in rule.items():
-    #     examples = examples[examples[attribute] != value]
     return examples
 
 # Example usage

@@ -1,3 +1,4 @@
+# k Means Clustering
 import numpy as np
 import pandas as pd
 
@@ -14,7 +15,7 @@ def update_centroids(cluster_centers, df):
     cluster_centers['y'].iloc[i] = y
 
 df = pd.DataFrame({'x': [2, 2, 8, 5, 7, 6, 1, 4], 'y': [10, 5, 4, 8, 5, 4, 2, 9]})
-print(df)
+# print(df)
 
 pd.options.mode.chained_assignment = None
 
@@ -23,12 +24,12 @@ def k_means(k, df):
   cluster_centers = tdf.iloc[:k]
   # print(cluster_centers)
   # print(cluster)
-  pr_cl = np.ones(k)
-  cl = np.zeros(k)
+  pr_cl = [1] * len(tdf)
+  cl = [0] * len(tdf)
   pr_cr = tdf.iloc[-k: -1]
   # print(pr_cr)
   while True:
-    tdf['Cluster'] = np.ones(len(tdf))
+    tdf['Cluster'] = [1] * len(tdf)
     for i in range(len(tdf)):
       point = tdf.iloc[i]
       min_dist = FLOAT_MAX
@@ -49,9 +50,9 @@ def k_means(k, df):
     pr_cr = cluster_centers
     update_centroids(cluster_centers, tdf)
     pr_cl = cl
-    cl = tdf['Cluster'].unique()
+    cl = tdf['Cluster']
   print(tdf)
   print(cluster_centers)
   return tdf, cluster_centers
-print(df)
+# print(df)
 cdf, centroids = k_means(3, df)

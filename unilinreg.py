@@ -1,10 +1,7 @@
+# Linear Regression
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
-# hypothesis
-def h(x, c = 0, m = 0):
-    return m * x + c
 
 # calculate slope
 def m(sigma_x, sigma_y, sigma_xy, sigma_xsq, n):
